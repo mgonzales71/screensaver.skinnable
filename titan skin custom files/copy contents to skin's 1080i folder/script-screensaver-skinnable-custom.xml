@@ -40,8 +40,8 @@ Most probably it won't look pretty but now screensaver.digitalclock will work wi
 			<height>128</height>
 			<fadetime>500</fadetime>
 			<texture>special://skin/icon.png</texture>
-			<animation time="2500" effect="fade" start="20" end="100" easing="in" tween="sine">Visible</animation>
-			<animation time="2500" effect="fade" start="100" end="20" easing="out" tween="sine">Hidden</animation>
+			<animation time="3000" effect="fade" start="10" end="100" easing="in" tween="sine">Visible</animation>
+			<animation time="3000" effect="fade" start="100" end="10" easing="out" tween="sine">Hidden</animation>
 			<aspectratio>keep</aspectratio>
 			<visible>!IntegerGreaterThan(System.Time(ss),15)</visible>
 		</control>
@@ -54,8 +54,8 @@ Most probably it won't look pretty but now screensaver.digitalclock will work wi
 			<height>128</height>
 			<fadetime>500</fadetime>
 			<texture>special://skin/icon.png</texture>
-			<animation time="2500" effect="fade" start="20" end="100" easing="in" tween="sine">Visible</animation>
-			<animation time="2500" effect="fade" start="100" end="20" easing="out" tween="sine">Hidden</animation>
+			<animation time="3000" effect="fade" start="10" end="100" easing="in" tween="sine">Visible</animation>
+			<animation time="3000" effect="fade" start="100" end="10" easing="out" tween="sine">Hidden</animation>
 			<aspectratio>keep</aspectratio>
 			<visible>IntegerGreaterThan(System.Time(ss),15) + !IntegerGreaterThan(System.Time(ss),30)</visible>
 		</control>
@@ -68,8 +68,8 @@ Most probably it won't look pretty but now screensaver.digitalclock will work wi
 			<height>128</height>
 			<fadetime>500</fadetime>
 			<texture>special://skin/icon.png</texture>
-			<animation time="2500" effect="fade" start="20" end="100" easing="in" tween="sine">Visible</animation>
-			<animation time="2500" effect="fade" start="100" end="20" easing="out" tween="sine">Hidden</animation>
+			<animation time="3000" effect="fade" start="10" end="100" easing="in" tween="sine">Visible</animation>
+			<animation time="3000" effect="fade" start="100" end="10" easing="out" tween="sine">Hidden</animation>
 			<aspectratio>keep</aspectratio>
 			<visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),45)</visible>
 		</control>
@@ -82,9 +82,9 @@ Most probably it won't look pretty but now screensaver.digitalclock will work wi
 			<height>128</height>
 			<fadetime>500</fadetime>
 			<texture>special://skin/icon.png</texture>
-			<animation time="2500" effect="fade" start="20" end="100" easing="in" tween="sine">Visible</animation>
-			<animation time="2500" effect="fade" start="100" end="20" easing="out" tween="sine">Hidden</animation>
-        <animation time="500" effect="fade">Hidden</animation>
+			<animation time="3000" effect="fade" start="10" end="100" easing="in" tween="sine">Visible</animation>
+			<animation time="3000" effect="fade" start="100" end="10" easing="out" tween="sine">Hidden</animation>
+			<animation time="500" effect="fade">Hidden</animation>
 			<aspectratio>keep</aspectratio>
 			<visible>IntegerGreaterThan(System.Time(ss),45)</visible>
 		</control>
