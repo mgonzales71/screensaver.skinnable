@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file (skin.default) is meant to be used by screensaver.digitalclock if there is no specific xml file for the current skin. 1920x1080 1080i / 1280x720 720p
+Confluence fonts and font sizes are used.
+Most probably it won't look pretty but now screensaver.digitalclock will work with any skin.
+-->
+<window>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>DialogOverlayExtra</include>
+		<include>animation_view_change</include>
+		<include>animation_fade_visible_hidden</include>
+		
+		
+		<control type="image">
+			<description>Background</description>
+			<width>2048</width>
+			<height>1208</height>
+			<texture>special://skin/extras/screensaver.skinnable/background.png</texture>
+			<fadetime>500</fadetime>
+			<aspectratio>scale</aspectratio>
+			<visible>IsEmpty(Window(Home).Property(SkinHelper.PicturesBackground))</visible>
+		</control>
+
+		<control type="image">
+			<description>Background</description>
+			<width>2048</width>
+			<height>1208</height>
+			<texture>$INFO[Window(Home).Property(SkinHelper.PicturesBackground)]</texture>
+			<fadetime>500</fadetime>
+			<aspectratio>scale</aspectratio>
+			<visible>!IsEmpty(Window(Home).Property(SkinHelper.PicturesBackground))</visible>
+		</control>
+		
+		<control type="image">
+			<description>Skin Logo</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>128</width>
+			<height>128</height>
+			<fadetime>500</fadetime>
+			<texture>special://skin/icon.png</texture>
+			<animation time="2500" effect="fade" start="20" end="100" easing="in" tween="sine">Visible</animation>
+			<animation time="2500" effect="fade" start="100" end="20" easing="out" tween="sine">Hidden</animation>
+			<aspectratio>keep</aspectratio>
+			<visible>!IntegerGreaterThan(System.Time(ss),15)</visible>
+		</control>
+		
+		<control type="image">
+			<description>Skin Logo</description>
+			<posx>1792</posx>
+			<posy>1080</posy>
+			<width>128</width>
+			<height>128</height>
+			<fadetime>500</fadetime>
+			<texture>special://skin/icon.png</texture>
+			<animation time="2500" effect="fade" start="20" end="100" easing="in" tween="sine">Visible</animation>
+			<animation time="2500" effect="fade" start="100" end="20" easing="out" tween="sine">Hidden</animation>
+			<aspectratio>keep</aspectratio>
+			<visible>IntegerGreaterThan(System.Time(ss),15) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+		</control>
+		
+		<control type="image">
+			<description>Skin Logo</description>
+			<posx>0</posx>
+			<posy>1080</posy>
+			<width>128</width>
+			<height>128</height>
+			<fadetime>500</fadetime>
+			<texture>special://skin/icon.png</texture>
+			<animation time="2500" effect="fade" start="20" end="100" easing="in" tween="sine">Visible</animation>
+			<animation time="2500" effect="fade" start="100" end="20" easing="out" tween="sine">Hidden</animation>
+			<aspectratio>keep</aspectratio>
+			<visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),45)</visible>
+		</control>
+
+		<control type="image">
+			<description>Skin Logo</description>
+			<posx>1792</posx>
+			<posy>0</posy>
+			<width>128</width>
+			<height>128</height>
+			<fadetime>500</fadetime>
+			<texture>special://skin/icon.png</texture>
+			<animation time="2500" effect="fade" start="20" end="100" easing="in" tween="sine">Visible</animation>
+			<animation time="2500" effect="fade" start="100" end="20" easing="out" tween="sine">Hidden</animation>
+        <animation time="500" effect="fade">Hidden</animation>
+			<aspectratio>keep</aspectratio>
+			<visible>IntegerGreaterThan(System.Time(ss),45)</visible>
+		</control>
+		
+        <control type="group">
+
+            <description>Clock and Date</description>
+            <posx>625</posx>
+            <posy>300</posy>
+            <width>690</width>
+            <height>500</height>
+            <visible>true</visible>
+
+		<control type="group">
+			
+				<control type="image">
+                    <description>Clock Background</description>
+                    <posy>10</posy>
+                    <posx>0</posx>
+                    <width>690</width>
+                    <height>217</height>
+                    <colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+					<animation effect="fade" start="100" end="50" time="150" condition="true">Conditional</animation>
+					<texture border="5">diffuse/panel.png</texture>	
+                </control>
+
+				<control type="image">
+                    <description>Clock Background</description>
+                    <posy>20</posy>
+                    <posx>10</posx>
+                    <width>670</width>
+                    <height>197</height>
+                    <colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+					<animation effect="fade" start="100" end="90" time="150" condition="true">Conditional</animation>
+					<texture border="5">diffuse/panel.png</texture>	
+                </control>
+				
+				<control type="image">
+					<posy>10</posy>
+					<posx>0</posx>
+					<width>230</width>
+					<height>217</height>
+					<texture>special://skin/extras/screensaver.skinnable/retro-flip-clock/digits/$INFO[System.Time(hh)].png</texture>
+					<fadetime>500</fadetime>
+					<visible>IsEmpty(System.Time(xx))</visible>
+					<aspectratio>keep</aspectratio>
+				</control>
+
+				<control type="image">
+					<posy>10</posy>
+					<posx>0</posx>
+					<width>230</width>
+					<height>217</height>
+					<texture>special://skin/extras/screensaver.skinnable/retro-flip-clock/$INFO[System.Time(xx)]/$INFO[System.Time(hh)].png</texture>
+					<fadetime>500</fadetime>
+					<visible>!IsEmpty (System.Time(xx))</visible>			
+					<aspectratio>keep</aspectratio>
+				</control>
+
+				<control type="image">
+					<posy>10</posy>
+					<posx>230</posx>
+					<width>230</width>
+					<height>217</height>
+					<texture>special://skin/extras/screensaver.skinnable/retro-flip-clock/digits/$INFO[System.Time(mm)].png</texture>
+					<fadetime>500</fadetime>
+					<aspectratio>keep</aspectratio>
+				</control>
+
+				<control type="image">
+					<posy>10</posy>
+					<posx>460</posx>
+					<width>230</width>
+					<height>217</height>
+					<texture>special://skin/extras/screensaver.skinnable/retro-flip-clock/digits/$INFO[System.Time(ss)].png</texture>
+					<fadetime>500</fadetime>
+					<aspectratio>keep</aspectratio>
+				</control>
+
+				<control type="label">
+					<label>$LOCALIZE[31040]:  [COLOR=$INFO[Skin.String(HeaderTextColor)]]$INFO[Player.Title][/COLOR]</label>
+					<description>Information</description>
+					<posx>0</posx>
+					<posy>+247</posy>
+					<width>690</width>
+					<height>52</height>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Bold42</font>
+					<visible>!IsEmpty(Player.Title)</visible>
+				</control>
+				
+				<control type="label">
+					<label>$INFO[System.Date(DDD)], $INFO[System.Date(dd MMM yyyy)]</label>
+					<description>Date</description>
+					<posx>0</posx>
+					<posy>+309</posy>
+					<width>690</width>
+					<height>52</height>
+					<textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Bold42</font>
+				</control>
+				
+				<control type="image">
+					<description>Weathericon</description>
+					<texture>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherIconsExtension]</texture>
+					<posx>247</posx>
+					<posy>+350</posy>
+					<width>195</width>
+					<height>195</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				
+				<control type="label">
+					<label>$INFO[Window(Weather).Property(Current.Condition)] - $INFO[Window(Weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits]</label>
+					<description>Weather Conditions</description>
+					<posx>0</posx>
+					<posy>+530</posy>
+					<width>690</width>
+					<height>52</height>
+					<textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Bold42</font>
+					<visible>Weather.IsFetched</visible>
+				</control>
+			</control>
+		
+		</control>
+		
+		<!-- Snow Effect -->
+		<control type="group">
+        <include condition="Skin.HasSetting(enablesnow)">snow</include>
+		</control>
+		
+</controls>
+</window>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file (skin.default.xml) is meant to be used by screensaver.skinnable if there is no script-screensaver-skinnable-custom.xml file for the current skin available.
+
+It will display a black screen as a fallback.
+
+create the file script-screensaver-skinnable-custom.xml in your skin's xml dir.
+
+The screensaver will then display this customized xml file when called.
+
+the following skin resolutions are supported:
+4x3Hirez 16x9 21x9 720p 1080i
+-->
+<window>
+	<controls>
+		<control type="group">
+		<!-- display black screen -->
+		
+		<control type="image">
+			<description>Skin Logo</description>
+			<posx>512</posx>
+			<posy>230</posy>
+			<width>256</width>
+			<height>256</height>
+			<fadetime>500</fadetime>
+			<texture>special://skin/icon.png</texture>
+			<animation time="2500" effect="fade" start="20" end="100" easing="in" tween="sine">Visible</animation>
+			<animation time="2500" effect="fade" start="100" end="20" easing="out" tween="sine">Hidden</animation>
+			<aspectratio>keep</aspectratio>
+			<visible>!IntegerGreaterThan(System.Time(ss),10)</visible>
+		</control>
+		
+		<control type="image">
+			<description>Skin Logo</description>
+			<posx>512</posx>
+			<posy>230</posy>
+			<width>256</width>
+			<height>256</height>
+			<fadetime>500</fadetime>
+			<texture>special://skin/icon.png</texture>
+			<animation time="2500" effect="fade" start="20" end="100" easing="in" tween="sine">Visible</animation>
+			<animation time="2500" effect="fade" start="100" end="20" easing="out" tween="sine">Hidden</animation>
+			<aspectratio>keep</aspectratio>
+			<visible>IntegerGreaterThan(System.Time(ss),20) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+		</control>
+
+		<control type="image">
+			<description>Skin Logo</description>
+			<posx>512</posx>
+			<posy>230</posy>
+			<width>256</width>
+			<height>256</height>
+			<fadetime>500</fadetime>
+			<texture>special://skin/icon.png</texture>
+			<animation time="2500" effect="fade" start="20" end="100" easing="in" tween="sine">Visible</animation>
+			<animation time="2500" effect="fade" start="100" end="20" easing="out" tween="sine">Hidden</animation>
+			<aspectratio>keep</aspectratio>
+			<visible>IntegerGreaterThan(System.Time(ss),40) + !IntegerGreaterThan(System.Time(ss),50)</visible>
+		</control>
+		
+		</control>
+	</controls>
+</window>

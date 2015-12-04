@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="screensaver.skinnable"
+        name="Skinnable Screensaver"
+        version="1.0.0"
+        provider-name="mgonzales71">
+        <requires>
+        	<import addon="xbmc.python" version="2.1.0"/>
+  	</requires>
+  	<extension point="xbmc.ui.screensaver" library="default.py" />
+  	<extension point="xbmc.addon.metadata">
+    		<platform>all</platform>
+    		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    		<summary lang="en">Skinnable screensaver.</summary>
+    		<description lang="en">Skinnable screensaver - skin devs can create custom screensavers for their skin </description>
+		<disclaimer lang="en">For bugs, requests or general questions visit the Skinnable screensaver thread on the Kodi forum.</disclaimer>
+  	</extension>
+</addon>
