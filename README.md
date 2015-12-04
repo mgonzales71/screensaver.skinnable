@@ -12,3 +12,4 @@ If no script-screensaver-skinnable-custom.xml is found it will use the file skin
 The included skin.default.xml fallback XML file is very basic and will display a black background and if available the skin's logo/icon that will fade in and out.
 
 Let me know if you encounter any bugs or issues.
+open an issue on GitHub - https://github.com/mgonzales71/screensaver.skinnable
